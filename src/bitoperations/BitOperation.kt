@@ -1,10 +1,10 @@
 package bitoperations
 
-fun main(args: Array<String>) {
+fun main() {
     println(getBit(1, 0))
     println(setBit(4, 1))
     println(clearBit(2, 1))
-    println(clearBitsMsbTo0th(13, 3)) //1101
+    println(clearBitsMsbTo0th(13, 3)) //13; 1101
     println(clearBits0thToIth(13, 2))
     println(updateBit(13, 2, false))
     println(insertBits(107, 7, 1, 4))
