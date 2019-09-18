@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/basics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/basics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/extensions.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.ExtensionsKt">
+  <component name="RunManager" selected="Kotlin.BasicsKt">
     <configuration name="BasicsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -109,9 +111,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.BasicsKt" />
         <item itemvalue="Kotlin.ExtensionsKt" />
         <item itemvalue="Kotlin.MapsKt" />
-        <item itemvalue="Kotlin.BasicsKt" />
         <item itemvalue="Kotlin.bitoperations.BitOperationKt" />
         <item itemvalue="Kotlin.HelloKt" />
       </list>
