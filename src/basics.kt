@@ -14,6 +14,7 @@ fun main() {
 
     val fullPath = "/Users/hoge/IdeaProjects/kotlin-learning/src/basics.kt"
     parseAndPrintFileName(fullPath)
+    parseAndPrintFileNameByRegex(fullPath)
 }
 
 
@@ -48,4 +49,13 @@ fun parseAndPrintFileName(path: String) {
     val extension = fullName.substringAfterLast('.')
 
     println("directory: $directory, fullName: $fullName, file name: $fileName, extension: $extension")
+}
+
+fun parseAndPrintFileNameByRegex(path: String) {
+    val regex = """(.+)/(.+)\.(.+)""".toRegex()
+    val matchResult = regex.matchEntire(path)
+    if(matchResult != null) {
+        val (directory, name, extension) = matchResult.destructured
+        print("directory: $directory, fileName: $name, extension: $extension")
+    }
 }
