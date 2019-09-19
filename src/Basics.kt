@@ -12,7 +12,7 @@ fun main() {
     }
     println()
 
-    val fullPath = "/Users/hoge/IdeaProjects/kotlin-learning/src/basics.kt"
+    val fullPath = "/Users/hoge/IdeaProjects/kotlin-learning/src/Basics.kt"
     parseAndPrintFileName(fullPath)
     parseAndPrintFileNameByRegex(fullPath)
 }

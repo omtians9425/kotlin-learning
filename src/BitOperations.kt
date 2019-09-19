@@ -1,5 +1,3 @@
-package bitoperations
-
 fun main() {
     println(getBit(1, 0))
     println(setBit(4, 1))
