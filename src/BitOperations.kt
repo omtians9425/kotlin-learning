@@ -6,6 +6,8 @@ fun main() {
     println(clearBits0thToIth(13, 2))
     println(updateBit(13, 2, false))
     println(insertBits(107, 7, 1, 4))
+    println(inverseBit(13, 2))
+    println(inverseBit(13, 1))
 }
 
 //get bit on i th index of num
@@ -37,6 +39,10 @@ fun updateBit(num: Int, i: Int, bitIs1: Boolean): Int {
     val value = if(bitIs1) 1 else 0
     val mask = (1 shl i).inv()
     return (mask and num) or (value shl i)
+}
+
+fun inverseBit(num: Int, i: Int): Int {
+    return num xor (1 shl i)
 }
 
 //insert m's full bits to n (range i ~ j th)
