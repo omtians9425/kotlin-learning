@@ -1,4 +1,3 @@
-import java.lang.StringBuilder
 
 fun main() {
     var list = mutableListOf(1,2,3,4,5)
@@ -19,7 +18,11 @@ fun main() {
     println(result.joinToString())
 }
 
-//lambda with reveiver
+/*
+lambda with receiver sample
+not need to pass target object as an argument because of extension function lambda.
+this make it possible to express "operation on the target" with a single argument(lambda).
+*/
 inline fun <T> T.customApply(block: T.() -> Unit): T {
     block()
     return this
