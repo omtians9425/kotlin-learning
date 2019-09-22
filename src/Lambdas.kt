@@ -1,3 +1,4 @@
+import java.lang.StringBuilder
 
 fun main() {
     var list = mutableListOf(1,2,3,4,5)
@@ -12,18 +13,38 @@ fun main() {
     )
     println(listOfList.flatten().toSet())
 
-    val result = list.customApply {
+    val result = list.myApply {
         addAll(listOf(100, 101, 102))
     }
     println(result.joinToString())
+
+    val withResult = myWith(StringBuilder()) {
+        for(c in 'A'..'G') {
+            append(c)
+        }
+        toString()
+    }
+    println(withResult)
+
+    println(withResult.any { it == 'E' })
 }
 
 /*
 lambda with receiver sample
-not need to pass target object as an argument because of extension function lambda.
+not need to pass target object(; receiver) as an argument because of extension function.
 this make it possible to express "operation on the target" with a single argument(lambda).
 */
-inline fun <T> T.customApply(block: T.() -> Unit): T {
+inline fun <T> T.myApply(block: T.() -> Unit): T {
     block()
     return this
+}
+
+//argument is extension func, so receiver is referenced by this keyword in lambda
+inline fun <T,R> myWith(target: T, block: T.() -> R): R {
+    return target.block()
+}
+
+//this version doesn't uses ext, so referenced by it keyword
+inline fun <T,R> myAnotherWith(target: T, block: (T) -> R): R {
+    return block(target)
 }
