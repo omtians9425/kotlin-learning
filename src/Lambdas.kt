@@ -1,25 +1,34 @@
 import java.lang.StringBuilder
 
 fun main() {
-    var list = mutableListOf(1,2,3,4,5)
+    var list = mutableListOf(1, 2, 3, 4, 5)
     println(list.maxBy { it })
     list = list.map { 2 }.toMutableList()
     print(list.joinToString())
 
     val listOfList = listOf(
-        listOf(1,2,3),
-        listOf(3,4,5),
-        listOf(5,6,7)
+        listOf(1, 2, 3),
+        listOf(3, 4, 5),
+        listOf(5, 6, 7)
     )
     println(listOfList.flatten().toSet())
 
-    val result = list.myApply {
-        addAll(listOf(100, 101, 102))
-    }
-    println(result.joinToString())
+    println(
+        list.myApply {
+            addAll(listOf(100, 101, 102))
+        }.joinToString()
+    )
+
+    println(
+        StringBuilder().apply {
+            for (c in 'A'..'Z') {
+                append(c)
+            }
+        }.toString()
+    )
 
     val withResult = myWith(StringBuilder()) {
-        for(c in 'A'..'G') {
+        for (c in 'A'..'G') {
             append(c)
         }
         toString()
@@ -39,12 +48,12 @@ inline fun <T> T.myApply(block: T.() -> Unit): T {
     return this
 }
 
-//argument is extension func, so receiver is referenced by this keyword in lambda
-inline fun <T,R> myWith(target: T, block: T.() -> R): R {
+//argument is extension func, so receiver is referenced by the this keyword in lambda
+inline fun <T, R> myWith(target: T, block: T.() -> R): R {
     return target.block()
 }
 
-//this version doesn't uses ext, so referenced by it keyword
-inline fun <T,R> myAnotherWith(target: T, block: (T) -> R): R {
+//this version doesn't uses ext, so referenced by the it keyword
+inline fun <T, R> myAnotherWith(target: T, block: (T) -> R): R {
     return block(target)
 }
