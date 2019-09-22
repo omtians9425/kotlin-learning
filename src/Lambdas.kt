@@ -36,6 +36,15 @@ fun main() {
     println(withResult)
 
     println(withResult.any { it == 'E' })
+
+    println(
+        buildString {
+            append("from Z to A: ")
+            for(c in 'Z' downTo 'A' ) {
+                append(c)
+            }
+        }
+    )
 }
 
 /*
