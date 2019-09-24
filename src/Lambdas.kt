@@ -56,18 +56,20 @@ fun main() {
 
 
     println(
-        StringBuilder().myLet {
+        StringBuilder().myLet2 {
             append("add")
             toString()
         }
     )
 
     println(
-        StringBuilder().myLet2 {
+        StringBuilder().myLet1 {
             it.append("hoge")
             it.toString()
         }
     )
+
+    log { print(this) }
 }
 
 /*
@@ -76,24 +78,33 @@ not need to pass target object(; receiver) as an argument because of extension f
 this make it possible to express "operation on the target" with a single argument(lambda).
 */
 inline fun <T> T.myApply(block: T.() -> Unit): T {
-    block()
+    this.block() //pass lambda to receiver
     return this
 }
 
 //argument is extension func, so receiver is referenced by the this keyword in lambda
 inline fun <T, R> myWith(target: T, block: T.() -> R): R {
-    return target.block()
+    return target.block() //pass lambda to receiver
 }
 
-//this version doesn't uses ext, so referenced by the it keyword
+/*
+this version doesn't uses ext, so referenced by the it keyword
+also normal lambda version(not lambda with receiver)
+ */
 inline fun <T, R> myAnotherWith(target: T, block: (T) -> R): R {
     return block(target)
 }
 
-inline fun <T, R> T.myLet(block: T.() -> R): R {
-    return block()
+inline fun <T, R> T.myLet1(block: (T) -> R): R {
+    return block(this)
 }
 
-inline fun <T, R> T.myLet2(block: (T) -> R): R {
-    return block(this)
+//lambda with receiver
+inline fun <T, R> T.myLet2(block: T.() -> R): R {
+    return this.block() //pass lambda to receiver
+}
+
+fun log(log: String.() -> Unit) {
+    "hoge".log()
+    "fuga".log()
 }
