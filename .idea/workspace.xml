@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/TypeSafety.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-learning/META-INF/kotlin-learning.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-learning/META-INF/kotlin-learning.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lambdas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lambdas.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.TypeSafetyKt">
+  <component name="RunManager" selected="Kotlin.LambdasKt">
     <configuration name="BitOperationsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -118,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.TypeSafetyKt" />
         <item itemvalue="Kotlin.LambdasKt" />
+        <item itemvalue="Kotlin.TypeSafetyKt" />
         <item itemvalue="Kotlin.InterfaceKt" />
         <item itemvalue="Kotlin.SealedKt" />
         <item itemvalue="Kotlin.BitOperationsKt" />

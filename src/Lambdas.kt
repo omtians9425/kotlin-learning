@@ -37,12 +37,35 @@ fun main() {
 
     println(withResult.any { it == 'E' })
 
+    val withResult2 = myAnotherWith(StringBuilder()) {
+        for (c in 'A'..'G') {
+            it.append(c)
+        }
+        it.toString()
+    }
+    println(withResult2)
+
     println(
         buildString {
             append("from Z to A: ")
-            for(c in 'Z' downTo 'A' ) {
+            for (c in 'Z' downTo 'A') {
                 append(c)
             }
+        }
+    )
+
+
+    println(
+        StringBuilder().myLet {
+            append("add")
+            toString()
+        }
+    )
+
+    println(
+        StringBuilder().myLet2 {
+            it.append("hoge")
+            it.toString()
         }
     )
 }
@@ -65,4 +88,12 @@ inline fun <T, R> myWith(target: T, block: T.() -> R): R {
 //this version doesn't uses ext, so referenced by the it keyword
 inline fun <T, R> myAnotherWith(target: T, block: (T) -> R): R {
     return block(target)
+}
+
+inline fun <T, R> T.myLet(block: T.() -> R): R {
+    return block()
+}
+
+inline fun <T, R> T.myLet2(block: (T) -> R): R {
+    return block(this)
 }
