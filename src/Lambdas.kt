@@ -27,6 +27,12 @@ fun main() {
         }.toString()
     )
 
+    println(
+        list.myAlso {
+            it.addAll(listOf(103,105, 106))
+        }.joinToString()
+    )
+
     val withResult = myWith(StringBuilder()) {
         for (c in 'A'..'G') {
             append(c)
@@ -79,6 +85,12 @@ this make it possible to express "operation on the target" with a single argumen
 */
 inline fun <T> T.myApply(block: T.() -> Unit): T {
     this.block() //pass lambda to receiver
+    return this
+}
+
+//normal lambda version of apply is also
+inline fun <T> T.myAlso(block: (T) -> Unit): T {
+    block(this)
     return this
 }
 
