@@ -90,7 +90,7 @@ inline fun <T> T.myApply(block: T.() -> Unit): T {
 
 //normal lambda version of apply is also
 inline fun <T> T.myAlso(block: (T) -> Unit): T {
-    block(this)
+    block(this) //pass target object to lambda
     return this
 }
 
