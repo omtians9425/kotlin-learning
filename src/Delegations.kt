@@ -1,5 +1,3 @@
-import kotlin.contracts.CallsInPlace
-import kotlin.contracts.contract
 
 /**
  * Delegation for property's accessor.
