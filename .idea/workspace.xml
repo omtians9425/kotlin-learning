@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="" />
+    <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-learning/META-INF/kotlin-learning.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-learning/META-INF/kotlin-learning.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Overloads.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Overloads.kt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +29,10 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -46,20 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.LambdasKt">
-    <configuration name="BitOperationsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-learning" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="BitOperationsKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.OverloadsKt">
     <configuration name="InterfaceKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -86,14 +80,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SealedKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="OthersKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="SealedKt" />
+      <option name="MAIN_CLASS_NAME" value="OthersKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OverloadsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-learning" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="OverloadsKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.OverloadsKt" />
+        <item itemvalue="Kotlin.InterfaceKt" />
+        <item itemvalue="Kotlin.OthersKt" />
         <item itemvalue="Kotlin.LambdasKt" />
         <item itemvalue="Kotlin.TypeSafetyKt" />
-        <item itemvalue="Kotlin.InterfaceKt" />
-        <item itemvalue="Kotlin.SealedKt" />
-        <item itemvalue="Kotlin.BitOperationsKt" />
       </list>
     </recent_temporary>
   </component>
