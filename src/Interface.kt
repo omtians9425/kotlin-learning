@@ -56,7 +56,7 @@ class SelfDelegationCollection<T> : Collection<T> {
     override fun isEmpty(): Boolean = innerList.isEmpty()
 }
 
-//delegation by "by" keyword
+//delegation by by keyword
 class DelegationCollection<T> (innerList: Collection<T> = listOf()) : Collection<T> by innerList
 class DelegationMutableCollection<T>(innerList: MutableCollection<T> = mutableListOf()) : MutableCollection<T> by innerList
 
