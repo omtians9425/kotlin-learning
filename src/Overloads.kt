@@ -6,8 +6,8 @@ fun main() {
     println(myCollection.joinToString())
 
     //compareTo
-    val p1 = Person(lastName = "Ken", firstName = "Block")
-    val p2 = Person(lastName = "Takashi", firstName = "Sato")
+    val p1 = Person1(lastName = "Ken", firstName = "Block")
+    val p2 = Person1(lastName = "Takashi", firstName = "Sato")
 
     println(p1 > p2)
 }
@@ -24,12 +24,12 @@ operator fun <T> MyCollection<T>.plusAssign(element: T) {
 }
 
 //compareTo
-class Person(
+class Person1(
     private val firstName: String, private val lastName: String
-) : Comparable<Person> {
-    override fun compareTo(other: Person): Int {
+) : Comparable<Person1> {
+    override fun compareTo(other: Person1): Int {
         //evaluate specified properties in order
-        return compareValuesBy(this, other, Person::lastName, Person::firstName)
+        return compareValuesBy(this, other, Person1::lastName, Person1::firstName)
     }
 }
 

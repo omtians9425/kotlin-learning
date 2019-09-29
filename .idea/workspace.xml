@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Delegations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Overloads.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Overloads.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -123,8 +123,6 @@
         <item itemvalue="Kotlin.DelegationsKt" />
         <item itemvalue="Kotlin.LambdasKt" />
         <item itemvalue="Kotlin.TypeSafetyKt" />
-        <item itemvalue="Kotlin.InterfaceKt" />
-        <item itemvalue="Kotlin.SealedKt" />
       </list>
     </recent_temporary>
   </component>
