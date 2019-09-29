@@ -34,6 +34,9 @@ interface User {
     val nickname: String //not able to have state; backing field
 }
 
+/**
+ * delegation for interface's implementation
+ */
 class PrivateUser(override val nickname: String): User //assigned at once at initialization
 
 class SubscribingUser1(private val email: String): User {
