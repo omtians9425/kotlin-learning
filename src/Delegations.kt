@@ -1,5 +1,6 @@
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
+import kotlin.reflect.KProperty
 
 /**
  * Delegation for property's accessor.
@@ -9,6 +10,14 @@ fun main() {
 
     val p = Person("Ken")
     p.emails.forEach { println(it.text) }
+
+    val person4 = Person4()
+    person4.setAttributes("name", "Takeshi")
+    println(person4.name)
+
+    val person3 = Person3(age = 26, name = "hoge", salary = 10)
+    person3.name
+
 }
 
 /*
@@ -58,6 +67,9 @@ open class PropertyChangeHelper {
     }
 }
 
+/*
+getter/setter hard cord version
+ */
 class Person2(
     val name: String,
     age: Int,
@@ -83,29 +95,59 @@ class Person2(
         }
 }
 
+//class ObservableProperty(
+//    val propName: String,
+//    var propValue: Int,
+//    val changeSupport: PropertyChangeSupport
+//) {
+//    fun getValue(): Int = propValue
+//    fun setValue(newValue: Int) {
+//        val oldValue = propValue
+//        propValue = newValue
+//        changeSupport.firePropertyChange(propName, oldValue, newValue)
+//    }
+//}
+
+/*
+extract getter/setter version
+ */
+//class Person3(val name: String, age: Int, salary: Int) : PropertyChangeHelper() {
+//    val _age = ObservableProperty("age", age, changeSupport)
+//    var age: Int
+//        get() = _age.getValue()
+//        set(value) {
+//            _age.setValue(value)
+//        }
+//
+//    val _salary = ObservableProperty("salary", salary, changeSupport)
+//    var salary: Int
+//    get() = _salary.getValue()
+//    set(value) {_salary.setValue(value)}
+//}
+
 class ObservableProperty(
-    val propName: String,
-    var propValue: Int,
-    val changeSupport: PropertyChangeSupport
+    var propValue: Int, val changeSupport: PropertyChangeSupport
 ) {
-    fun getValue(): Int = propValue
-    fun setValue(newValue: Int) {
+    operator fun getValue(p: Person3, prop: KProperty<*>): Int = propValue
+
+    operator fun setValue(p: Person3, prop: KProperty<*>, newValue: Int) {
         val oldValue = propValue
         propValue = newValue
-        changeSupport.firePropertyChange(propName, oldValue, newValue)
+        changeSupport.firePropertyChange(prop.name, oldValue, newValue)
     }
 }
 
-class Person3(val name: String, age: Int, salary: Int) : PropertyChangeHelper() {
-    val _age = ObservableProperty("age", age, changeSupport)
-    var age: Int
-        get() = _age.getValue()
-        set(value) {
-            _age.setValue(value)
-        }
+class Person3 (val name: String, age:Int ,salary: Int) : PropertyChangeHelper() {
+    var age: Int by ObservableProperty(age, changeSupport)
+    var salary: Int by ObservableProperty(salary, changeSupport)
+}
 
-    val _salary = ObservableProperty("salary", salary, changeSupport)
-    var salary: Int
-    get() = _salary.getValue()
-    set(value) {_salary.setValue(value)}
+class Person4 {
+    private val _attributes = hashMapOf<String, String>()
+
+    fun setAttributes(attrName: String, value: String) {
+        _attributes[attrName] = value
+    }
+
+    val name: String by _attributes
 }
