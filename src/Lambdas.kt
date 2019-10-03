@@ -76,6 +76,14 @@ fun main() {
     )
 
     log { print(this) }
+
+    val method: () -> Unit = {print("hoge")}
+    val method1: (Int, Int) -> Int = {x, y -> x * y}
+    println(method1(1,2))
+
+    println(twoAndThree{x, y -> x * y})
+
+   println( "hogehogefugafuga".filter { it != 'h' })
 }
 
 /*
@@ -119,4 +127,20 @@ inline fun <T, R> T.myLet2(block: T.() -> R): R {
 fun log(log: String.() -> Unit) {
     "hoge".log()
     "fuga".log()
+}
+
+//take operation type as predicate
+fun twoAndThree(operation: (Int, Int) -> Int) {
+    val num = operation(2,3)
+    println(num)
+}
+
+fun String.filter(predicate: (Char) -> Boolean): String {
+    val sb = StringBuilder()
+    for(c in this.toCharArray()) {
+        if(predicate(c)) {
+            sb.append(c)
+        }
+    }
+    return sb.toString()
 }
