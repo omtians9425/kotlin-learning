@@ -7,14 +7,15 @@ fun main() {
 
     var sum = addNumber(l1, l2)
     //21 + 84 = 105, so head node is 5
-    while (sum!=null) {
+    while (sum != null) {
         println(sum.value)
         sum = sum.next
     }
 
-    println(
-        getPerms("abcd")?.joinToString()
-    )
+    println(getPerms("abcd")?.joinToString())
+    println(getPerms("")?.joinToString())
+    println(getPerms(null)?.joinToString())
+
 }
 
 /*
@@ -43,7 +44,7 @@ fun addNumber(n1: Node?, n2: Node?): Node? {
         l1 = l1?.next
         l2 = l2?.next
     }
-    if(carry != 0) {
+    if (carry != 0) {
         val n = Node(carry)
         curr.next = n
     }
@@ -56,19 +57,19 @@ Implemented by dp (top down)
  */
 
 fun getPerms(s: String?): List<String>? {
-    if(s == null) return null
-    if(s.isEmpty() || s.length == 1) {
+    if (s == null) return null
+    if (s.isEmpty() || s.length == 1) {
         return listOf(s)
     }
     val ret = mutableListOf<String>()
     val first = s[0]
-    val remain = s.substring(1)
-    val remainPerms = getPerms(remain)
+    val remaining = s.substring(1)
+    val remainPerms = getPerms(remaining)
     return remainPerms?.let {
-        println("remains: ${remainPerms.joinToString()}")
-        for(word in it) {
+        println("remaining: ${remainPerms.joinToString()}")
+        for (word in it) {
             val words = insertForAllPos(word, first)
-            println("insert new char[$first] for[$word] in remains: ${words.joinToString()}")
+            println("insert new char[$first] for[$word] in remaining: ${words.joinToString()}")
             ret.addAll(words)
         }
         ret
@@ -77,7 +78,7 @@ fun getPerms(s: String?): List<String>? {
 
 fun insertForAllPos(word: String, c: Char): List<String> {
     val ret = mutableListOf<String>()
-    for(i in 0..word.length) { //not word.indices
+    for (i in 0..word.length) { //not word.indices
         val begin = word.substring(0, i)
         val end = word.substring(i)
         ret.add(begin + c + end)
