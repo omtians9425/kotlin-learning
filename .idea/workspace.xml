@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lambdas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lambdas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/others.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Others.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +51,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.LambdasKt">
+  <component name="RunManager" selected="Kotlin.OthersKt">
     <configuration name="DelegationsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -119,6 +119,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.OthersKt" />
         <item itemvalue="Kotlin.LambdasKt" />
         <item itemvalue="Kotlin.DelegationsKt" />
         <item itemvalue="Kotlin.TypeSafetyKt" />
