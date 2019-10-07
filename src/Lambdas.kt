@@ -19,19 +19,23 @@ fun main() {
         }.joinToString()
     )
 
+    //apply has side effects
+    val sb = StringBuilder()
     println(
-        StringBuilder().apply {
+        sb.apply {
             for (c in 'A'..'Z') {
                 append(c)
             }
         }.toString()
     )
+    println(sb.toString())
 
     println(
         list.myAlso {
             it.addAll(listOf(103,105, 106))
         }.joinToString()
     )
+    println(list.joinToString())
 
     val withResult = myWith(StringBuilder()) {
         for (c in 'A'..'G') {
@@ -51,6 +55,12 @@ fun main() {
     }
     println(withResult2)
 
+    val sb2 = StringBuilder()
+    with(sb2) {
+        this.append("----------------------aa----------------------")
+    }
+    println(sb.toString())
+
     println(
         buildString {
             append("from Z to A: ")
@@ -60,13 +70,14 @@ fun main() {
         }
     )
 
-
+    val sb3 = StringBuilder()
     println(
-        StringBuilder().myLet2 {
+        sb3.myLet2 {
             append("add")
             toString()
         }
     )
+    println(sb3.toString())
 
     println(
         StringBuilder().myLet1 {
