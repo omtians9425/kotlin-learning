@@ -1,3 +1,5 @@
+import java.lang.IllegalArgumentException
+
 fun main() {
     val l1 = Node(1)
     l1.next = Node(2)
@@ -17,6 +19,11 @@ fun main() {
     println(getPerms("aaaaaaaaaabbbbbbbccccccccccccc")?.joinToString())
     println(getPerms("")?.joinToString())
     println(getPerms(null)?.joinToString())
+
+    println("get all parentheses for 1: ${getParen(1)?.joinToString()}")
+    println("get all parentheses for 2: ${getParen(2)?.joinToString()}")
+    println("get all parentheses for 3: ${getParen(3)?.joinToString()}")
+    println("get all parentheses for 4: ${getParen(4)?.joinToString()}")
 
 }
 
@@ -90,4 +97,25 @@ fun insertForAllPos(word: String, c: Char): List<String> {
         ret.add(begin + c + end)
     }
     return ret
+}
+
+/*
+List all valid parentheses
+ */
+fun getParen(n: Int): List<String>? {
+    require(n >= 0) { "argument n must be greater than 0" }
+    if(n == 0) return null
+    if(n == 1) return listOf("()")
+    val shorter = getParen(n - 1) ?: return null
+    val newer = mutableListOf<String>()
+    for ((index, elem) in shorter.withIndex()) {
+        if(index == 0) {
+            newer.add("$elem()")
+        } else {
+            newer.add("()$elem")
+            newer.add("$elem()")
+        }
+        newer.add("($elem)")
+    }
+    return newer
 }
