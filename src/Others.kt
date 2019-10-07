@@ -13,6 +13,8 @@ fun main() {
     }
 
     println(getPerms("abcd")?.joinToString())
+    println(getPerms("aaaaaaaaaa")?.joinToString())
+    println(getPerms("aaaaaaaaaabbbbbbbccccccccccccc")?.joinToString())
     println(getPerms("")?.joinToString())
     println(getPerms(null)?.joinToString())
 
@@ -52,7 +54,7 @@ fun addNumber(n1: Node?, n2: Node?): Node? {
 }
 
 /*
-List all permutations without duplication
+List all permutations.
 Implemented by dp (top down)
  */
 
@@ -62,11 +64,15 @@ fun getPerms(s: String?): List<String>? {
         return listOf(s)
     }
     val ret = mutableListOf<String>()
-    val first = s[0]
+    val first: Char = s[0]
     val remaining = s.substring(1)
     val remainPerms = getPerms(remaining)
     return remainPerms?.let {
-        println("remaining: ${remainPerms.joinToString()}")
+        println("remaining: ${it.joinToString()}")
+        //omit duplicates
+        if(it.any { elem -> elem.contains(first) }) {
+            return it //non-local return
+        }
         for (word in it) {
             val words = insertForAllPos(word, first)
             println("insert new char[$first] for[$word] in remaining: ${words.joinToString()}")
