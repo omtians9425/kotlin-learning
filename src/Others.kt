@@ -66,6 +66,15 @@ Implemented by dp (top down)
  */
 
 fun getPerms(s: String?): List<String>? {
+    fun insertForAllPos(word: String, c: Char): List<String> {
+        val ret = mutableListOf<String>()
+        for (i in 0..word.length) { //not word.indices
+            val begin = word.substring(0, i)
+            val end = word.substring(i)
+            ret.add(begin + c + end)
+        }
+        return ret
+    }
     if (s == null) return null
     if (s.isEmpty() || s.length == 1) {
         return listOf(s)
@@ -89,15 +98,6 @@ fun getPerms(s: String?): List<String>? {
     }
 }
 
-fun insertForAllPos(word: String, c: Char): List<String> {
-    val ret = mutableListOf<String>()
-    for (i in 0..word.length) { //not word.indices
-        val begin = word.substring(0, i)
-        val end = word.substring(i)
-        ret.add(begin + c + end)
-    }
-    return ret
-}
 
 /*
 List all valid parentheses
