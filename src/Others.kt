@@ -25,7 +25,7 @@ fun main() {
     println("get all parentheses for 3: ${getParen(3)?.joinToString()}")
     println("get all parentheses for 4: ${getParen(4)?.joinToString()}")
 
-    val image: Array<Array<Colors>> = Array(10){Array(10){Colors.R} }
+    val image: Array<Array<Colors>> = Array(10) { Array(10) { Colors.R } }
     initImage(image)
     printImage(image)
     paint(image, 0, 4, Colors.G)
@@ -92,7 +92,7 @@ fun getPerms(s: String?): List<String>? {
     return remainPerms?.let {
         println("remaining: ${it.joinToString()}")
         //omit duplicates
-        if(it.any { elem -> elem.contains(first) }) {
+        if (it.any { elem -> elem.contains(first) }) {
             return it //non-local return
         }
         for (word in it) {
@@ -110,12 +110,12 @@ List all valid parentheses
  */
 fun getParen(n: Int): List<String>? {
     require(n >= 0) { "argument n must be greater than 0" }
-    if(n == 0) return null
-    if(n == 1) return listOf("()")
+    if (n == 0) return null
+    if (n == 1) return listOf("()")
     val shorter = getParen(n - 1) ?: return null
     val newer = mutableListOf<String>()
     for ((index, elem) in shorter.withIndex()) {
-        if(index == 0) {
+        if (index == 0) {
             newer.add("$elem()")
         } else {
             newer.add("()$elem")
@@ -130,22 +130,23 @@ fun getParen(n: Int): List<String>? {
 /*
 Fill an area with the same color by specified color
  */
-enum class Colors {R, G, B}
+enum class Colors { R, G, B }
+
 fun paint(mat: Array<Array<Colors>>, r: Int, c: Int, nColor: Colors): Boolean {
     if (nColor == mat[r][c]) return false
     return helper(mat, r, c, mat[r][c], nColor)
 }
 
 fun helper(mat: Array<Array<Colors>>, r: Int, c: Int, oColor: Colors, nColor: Colors): Boolean {
-    if(r < 0 || r >= mat.size || c < 0 || c >= mat[0].size) {
+    if (r < 0 || r >= mat.size || c < 0 || c >= mat[0].size) {
         return false
     }
-    if(mat[r][c] == oColor) {
+    if (mat[r][c] == oColor) {
         mat[r][c] = nColor
-        helper(mat, r+1, c, oColor, nColor)
-        helper(mat, r, c+1, oColor, nColor)
-        helper(mat, r-1, c, oColor, nColor)
-        helper(mat, r, c-1, oColor, nColor)
+        helper(mat, r + 1, c, oColor, nColor)
+        helper(mat, r, c + 1, oColor, nColor)
+        helper(mat, r - 1, c, oColor, nColor)
+        helper(mat, r, c - 1, oColor, nColor)
         return true
     }
     return false
