@@ -25,6 +25,12 @@ fun main() {
     println("get all parentheses for 3: ${getParen(3)?.joinToString()}")
     println("get all parentheses for 4: ${getParen(4)?.joinToString()}")
 
+    val image: Array<Array<Colors>> = Array(10){Array(10){Colors.R} }
+    initImage(image)
+    printImage(image)
+    paint(image, 0, 4, Colors.G)
+    printImage(image)
+
 }
 
 /*
@@ -119,3 +125,53 @@ fun getParen(n: Int): List<String>? {
     }
     return newer
 }
+
+
+/*
+Fill an area with the same color by specified color
+ */
+enum class Colors {R, G, B}
+fun paint(mat: Array<Array<Colors>>, r: Int, c: Int, nColor: Colors): Boolean {
+    if (nColor == mat[r][c]) return false
+    return helper(mat, r, c, mat[r][c], nColor)
+}
+
+fun helper(mat: Array<Array<Colors>>, r: Int, c: Int, oColor: Colors, nColor: Colors): Boolean {
+    if(r < 0 || r >= mat.size || c < 0 || c >= mat[0].size) {
+        return false
+    }
+    if(mat[r][c] == oColor) {
+        mat[r][c] = nColor
+        helper(mat, r+1, c, oColor, nColor)
+        helper(mat, r, c+1, oColor, nColor)
+        helper(mat, r-1, c, oColor, nColor)
+        helper(mat, r, c-1, oColor, nColor)
+        return true
+    }
+    return false
+}
+
+fun printImage(mat: Array<Array<Colors>>) {
+    println("########### IMAGE ############")
+    for (i in mat.indices) {
+        for (j in mat[0].indices) {
+            print(mat[i][j].toString())
+        }
+        println()
+    }
+    println()
+}
+
+fun initImage(mat: Array<Array<Colors>>) {
+    for (i in mat.indices) {
+        for (j in mat[0].indices) {
+            if (i == 0) {
+                mat[i][j] = Colors.B
+            } else {
+                mat[i][j] = Colors.R
+            }
+        }
+        println()
+    }
+}
+
