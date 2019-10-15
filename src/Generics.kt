@@ -26,7 +26,10 @@ fun <T> typeCheck(list: T) {
 }
 
 fun printSum(c: Collection<*>) {
-    //By type erasure, "as" cast only check whether list or not but we can treat as int
+    /*
+    By type erasure, "as" cast only check whether list or not but we can treat as integer.
+    Therefore, even if it is List<String>, the cast succeeds, but if it is treated as integer, an exception occur.
+     */
     val intList = c as? List<Int> ?: throw IllegalArgumentException("List is expected")
     println(intList.sum())
 }
