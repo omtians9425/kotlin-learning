@@ -31,6 +31,8 @@ fun main() {
     paint(image, 0, 4, Colors.G)
     printImage(image)
 
+    println("coin change: ${makeCoinChange(15)}" )
+
 }
 
 /*
@@ -174,5 +176,23 @@ fun initImage(mat: Array<Array<Colors>>) {
         }
         println()
     }
+}
+//TODO consider duplication
+fun makeCoinChange(n: Int): Int{
+    if(n == 0) return 1
+    var ret = 0
+    if (n - 1 >= 0) {
+        ret++
+    }
+    if (n -5 >= 0) {
+        ret += makeCoinChange(n - 5)
+    }
+    if (n -10 >= 0) {
+        ret += makeCoinChange(n - 10)
+    }
+    if (n -25 >= 0) {
+        ret += makeCoinChange(n - 25)
+    }
+    return ret
 }
 
