@@ -1,4 +1,6 @@
 import java.lang.IllegalArgumentException
+import kotlin.system.measureNanoTime
+import kotlin.system.measureTimeMillis
 
 fun main() {
     val l1 = Node(1)
@@ -32,6 +34,10 @@ fun main() {
     printImage(image)
 
     println("coin change: ${makeCoinChange(15)}" )
+    println("coin change: ${makeCoinChangeMemo(15)}" )
+
+    println(measureNanoTime { makeCoinChange(1000) })
+    println(measureNanoTime { makeCoinChangeMemo(1000) })
 }
 
 /*
@@ -194,3 +200,29 @@ fun makeCoinChange(n: Int, denoms: IntArray, index: Int): Int {
     }
     return ret
 }
+
+fun makeCoinChangeMemo(n: Int) : Int {
+    val denoms = intArrayOf(25, 10, 5, 1)
+    val memo = Array(n + 1) {IntArray(denoms.size)}
+    return makeCoinChangeMemo(n, denoms, 0, memo)
+}
+
+fun makeCoinChangeMemo(n: Int, denoms: IntArray, index: Int, memo: Array<IntArray>): Int {
+    if(n <= 0 || index >= denoms.size - 1) return 1;
+    val denomAmount = denoms[index]
+    var ret = 0
+    var count = 0
+    while (denomAmount * count <= n) {
+        val remaining = n - denomAmount * count
+        if(memo[remaining][index] != 0) {
+            ret += memo[remaining][index]
+        } else {
+            memo[remaining][index] =  makeCoinChangeMemo(remaining, denoms, index + 1, memo)
+            ret += memo[remaining][index]
+        }
+        count++
+    }
+    return ret
+}
+
+
