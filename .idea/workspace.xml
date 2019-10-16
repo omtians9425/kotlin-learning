@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Others.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Others.kt" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Generics.kt" afterDir="false" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +56,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Kotlin.OthersKt">
+=======
+  <component name="RunManager" selected="Kotlin.GenericsKt">
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
     <configuration name="DelegationsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -66,53 +74,85 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="HighOrderFunctionKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="GenericsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="HighOrderFunctionKt" />
+=======
+      <option name="MAIN_CLASS_NAME" value="GenericsKt" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="LambdasKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="HighOrderFunctionKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="LambdasKt" />
+=======
+      <option name="MAIN_CLASS_NAME" value="HighOrderFunctionKt" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="OthersKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="LambdasKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="OthersKt" />
+=======
+      <option name="MAIN_CLASS_NAME" value="LambdasKt" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="TypeSafetyKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="OthersKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="TypeSafetyKt" />
+=======
+      <option name="MAIN_CLASS_NAME" value="OthersKt" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,11 +160,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+=======
+        <item itemvalue="Kotlin.GenericsKt" />
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
         <item itemvalue="Kotlin.OthersKt" />
         <item itemvalue="Kotlin.LambdasKt" />
         <item itemvalue="Kotlin.HighOrderFunctionKt" />
         <item itemvalue="Kotlin.DelegationsKt" />
+<<<<<<< HEAD
         <item itemvalue="Kotlin.TypeSafetyKt" />
+=======
+>>>>>>> a0c751766fa0d66c39832551234937586ada7af4
       </list>
     </recent_temporary>
   </component>
