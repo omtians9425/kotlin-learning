@@ -176,22 +176,21 @@ fun initImage(mat: Array<Array<Colors>>) {
         println()
     }
 }
-//TODO consider duplication
-fun makeCoinChange(n: Int): Int{
-    if(n == 0) return 1
+
+fun makeCoinChange(n: Int) : Int {
+    val denoms = intArrayOf(25, 10, 5, 1)
+    return makeCoinChange(n, denoms, 0)
+}
+
+fun makeCoinChange(n: Int, denoms: IntArray, index: Int): Int {
+    if(n <= 0 || index >= denoms.size - 1) return 1;
+    val denomAmount = denoms[index]
     var ret = 0
-    if (n - 1 >= 0) {
-        ret++
-    }
-    if (n -5 >= 0) {
-        ret += makeCoinChange(n - 5)
-    }
-    if (n -10 >= 0) {
-        ret += makeCoinChange(n - 10)
-    }
-    if (n -25 >= 0) {
-        ret += makeCoinChange(n - 25)
+    var count = 0
+    while (denomAmount * count <= n) {
+        val remaining = n - denomAmount * count
+        ret += makeCoinChange(remaining, denoms, index + 1)
+        count++
     }
     return ret
 }
-
