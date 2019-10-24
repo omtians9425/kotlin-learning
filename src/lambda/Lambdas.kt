@@ -1,3 +1,6 @@
+package lambda
+
+import classandinterface.joinToString
 import java.lang.StringBuilder
 
 fun main() {
@@ -92,7 +95,7 @@ fun main() {
     val method1: (Int, Int) -> Int = {x, y -> x * y}
     println(method1(1,2))
 
-    println(twoAndThree{x, y -> x * y})
+    println(twoAndThree { x, y -> x * y })
 
    println( "hogehogefugafuga".filter { it != 'h' })
 }

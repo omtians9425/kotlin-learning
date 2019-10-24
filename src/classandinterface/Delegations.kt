@@ -1,3 +1,5 @@
+package classandinterface
+
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport
 import kotlin.reflect.KProperty
@@ -40,13 +42,13 @@ class Person(val name: String) {
 on my own version. basically, above is syntax sugar of this code
 In above, backing property and one time initialization logic is encapsulated
  */
-//class Person(val name: String) {
-//    private var _emails: List<Email>? = null //backing property
+//class classes.Person(val name: String) {
+//    private var _emails: List<classes.Email>? = null //backing property
 //
-//    val emails: List<Email>
+//    val emails: List<classes.Email>
 //    get() {
 //        if(_emails == null) {
-//            _emails = loadEmails(this)
+//            _emails = classes.loadEmails(this)
 //        }
 //        return _emails!!
 //    }
@@ -95,7 +97,7 @@ class Person2(
         }
 }
 
-//class ObservableProperty(
+//class classes.ObservableProperty(
 //    val propName: String,
 //    var propValue: Int,
 //    val changeSupport: PropertyChangeSupport
@@ -111,15 +113,15 @@ class Person2(
 /*
 extract getter/setter version
  */
-//class Person3(val name: String, age: Int, salary: Int) : PropertyChangeHelper() {
-//    val _age = ObservableProperty("age", age, changeSupport)
+//class classes.Person3(val name: String, age: Int, salary: Int) : classes.PropertyChangeHelper() {
+//    val _age = classes.ObservableProperty("age", age, changeSupport)
 //    var age: Int
 //        get() = _age.getValue()
 //        set(value) {
 //            _age.setValue(value)
 //        }
 //
-//    val _salary = ObservableProperty("salary", salary, changeSupport)
+//    val _salary = classes.ObservableProperty("salary", salary, changeSupport)
 //    var salary: Int
 //    get() = _salary.getValue()
 //    set(value) {_salary.setValue(value)}

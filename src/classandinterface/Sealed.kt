@@ -1,4 +1,6 @@
-import Expr.*
+package classandinterface
+
+import classandinterface.Expr.*
 
 fun main() {
     println(eval(Sum(Sum(Num(5), Num(4)), Num(1))))

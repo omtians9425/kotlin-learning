@@ -1,3 +1,5 @@
+package classandinterface
+
 fun main () {
     println(PrivateUser("test@kotlinlang.org").nickname)
     println(SubscribingUser1("test@kotlinlang.org").nickname)
@@ -14,7 +16,7 @@ fun main () {
     mutableCollection.addAll(listOf(1,2,3))
     mutableCollection.forEach{ println(it)}
 
-    val set = CountingSet(mutableSetOf(1,2,3,3,3,3,3,3))
+    val set = CountingSet(mutableSetOf(1, 2, 3, 3, 3, 3, 3, 3))
     for (i in 1..10) {
         set.add(i)
     }

@@ -1,3 +1,5 @@
+package generics
+
 import java.lang.IllegalArgumentException
 import java.util.*
 
@@ -8,8 +10,8 @@ fun main() {
 
     printSum(listOf(1, 2, 3))
     printSum(listOf(1.0, 2.0, 3.0))
-//    printSum(setOf(1,2,3)) //Illegal Argument Exception
-//    printSum(listOf("1","2","3")) //ClassCastException occurs at sum
+//    generics.printSum(setOf(1,2,3)) //Illegal Argument Exception
+//    generics.printSum(listOf("1","2","3")) //ClassCastException occurs at sum
 
     //reified function sample
     println(listOf(1, 2, "fuga", 3, "hoge").filterInstance<String>())

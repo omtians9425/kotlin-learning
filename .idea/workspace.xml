@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0d6d596-3f1c-4306-b556-8e1bc4e2a101" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Variance.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Delegations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Delegations.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Generics.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/generics/Generics.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HighOrderFunction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lambda/HighOrderFunction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Interface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lambdas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lambda/Lambdas.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sealed.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/Sealed.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Variance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/generics/Variance.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/designpattern/StrategyPattern.kt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +43,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/classes" />
+      <recent name="$PROJECT_DIR$/src/lambda" />
+      <recent name="$PROJECT_DIR$/src/generics" />
+      <recent name="$PROJECT_DIR$/src/hoge" />
       <recent name="C:\Users\rskow\IdeaProjects\kotlin-learning\src" />
     </key>
   </component>
@@ -51,46 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.VarianceKt">
-    <configuration name="GenericsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-learning" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="GenericsKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HighOrderFunctionKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-learning" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="HighOrderFunctionKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LambdasKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-learning" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="LambdasKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.classes.DelegationsKt">
     <configuration name="OthersKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-learning" />
       <option name="VM_PARAMETERS" />
@@ -117,13 +89,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="classes.DelegationsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-learning" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="classes.DelegationsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="generics.GenericsKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-learning" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="generics.GenericsKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="lambda.LambdasKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-learning" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="lambda.LambdasKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.generics.GenericsKt" />
+      <item itemvalue="Kotlin.lambda.LambdasKt" />
+      <item itemvalue="Kotlin.OthersKt" />
+      <item itemvalue="Kotlin.VarianceKt" />
+      <item itemvalue="Kotlin.classes.DelegationsKt" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.classes.DelegationsKt" />
         <item itemvalue="Kotlin.VarianceKt" />
-        <item itemvalue="Kotlin.GenericsKt" />
+        <item itemvalue="Kotlin.generics.GenericsKt" />
         <item itemvalue="Kotlin.OthersKt" />
-        <item itemvalue="Kotlin.LambdasKt" />
-        <item itemvalue="Kotlin.HighOrderFunctionKt" />
+        <item itemvalue="Kotlin.lambda.LambdasKt" />
       </list>
     </recent_temporary>
   </component>

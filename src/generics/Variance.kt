@@ -1,4 +1,6 @@
-//fun main() {
+package generics
+
+//fun generics.lambda.lambda.classes.classes.classes.classes.main() {
 //    val herd = Herd(Cat(), Cat(), Animal())
 //}
 //

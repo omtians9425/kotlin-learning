@@ -1,3 +1,5 @@
+import classandinterface.joinToString
+
 fun main() {
     //operators
     println('x' * 10)
